@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Talleno</title>
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/fontawesome.css">
+
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/css/jqvmap.min.css">
+  <link rel="stylesheet" href="../assets/css/summernote-bs4.css">
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../assets/css/selectric.css">
+  <link rel="stylesheet" href="../assets/css/w2ui.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="../assets/css/datatables.min.css">
+  <link rel="stylesheet" href="../assets/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../assets/css/select.bootstrap4.min.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+
+  <!-- Mapa CSS -->
+  <link rel="stylesheet" href="../assets/css/leaflet.css">
+</head>
+
+<body class="sidebar-mini">
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      
+      <!--BARRA SUPERIOR INICIO -->
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li class="d-block d-md-none d-xl-none"><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+          <!-- BUSQUEDA INICIO -->
+          <div class="search-element">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+            <div class="search-backdrop"></div>
+            <div class="search-result">
+              <div class="search-header">
+                Anteriores
+              </div>
+              <div class="search-item">
+                <a href="#">Contenedor Palermo 1</a>
+                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+              </div>
+              <div class="search-item">
+                <a href="#">Recolector Acevedo</a>
+                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
+              </div>
+              <div class="search-header">
+                Result
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <div class="search-icon bg-danger text-white mr-3">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  Contenedores
+                </a>
+              </div>
+              <div class="search-item">
+                <a href="#">
+                  <div class="search-icon bg-primary text-white mr-3">
+                    <i class="fas fa-laptop"></i>
+                  </div>
+                  Recolectores
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- BUSQUEDA FIN -->
+        </form>
+        <!--BARRA SUP DERECHA INICIO -->
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Mensajes
+                <div class="float-right">
+                  <a href="#">Marcar todos como leídos</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
+                    <div class="is-online"></div>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Marina</b>
+                    <p>Hola</p>
+                    <div class="time">10 horas</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Gonzalo</b>
+                    <p>Fijate el contnedor 10</p>
+                    <div class="time">12 horas</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Notificaciones
+                <div class="float-right">
+                  <a href="#">Marcar todas como leidas</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-primary text-white">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Alerta 10 contenedores
+                    <div class="time text-primary">2 minutos</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Gonzalo</b> agrego un nuevo contenedor. <b>Belgrano 34</b>
+                    <div class="time">12 horas</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Ver todos <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Nicolas</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Logeado hace 5 min</div>
+              <a href="perfil.html" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Perfil
+              </a>
+              <a href="configuracion.html" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Configuración
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="index.html" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Salir
+              </a>
+            </div>
+          </li>
+        </ul>
+        <!--BARRA SUP DERECHA FIN -->
+      </nav>
+      <!--BARRA SUPERIOR FIN -->
+      <!--BARRA LATERAL INICIO -->
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="main.html"><i class="fas fa-trash-alt" style="margin-top: 0px;font-size: 26px;color: #6777ef;"></i></a>
+            <div style="font-size: 12px;margin-top: -40px;">TALLENO</div>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="main.html"><i class="fas fa-trash-alt" style="margin-top: 0px;font-size: 26px;color: #6777ef;"></i></a>
+            <div style="font-size: 12px;margin-top: -40px;">TALLENO</div>
+          </div>
+          <ul class="sidebar-menu">
+              <!-- <li class="menu-header">Principal</li> -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-fire"></i><span>Principal</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="main.html">Principal</a></li>
+                </ul>
+              </li>
+
+
+              <!-- <li class="menu-header">Usuarios</li> -->
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-users"></i> <span>Usuarios</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="usuarios.html">Usuarios</a></li>
+                  <li><a href="usuarios_alta.html">Alta</a></li>
+                  <li><a href="usuarios_auditoria.html">Auditoria</a></li>
+                </ul>
+              </li>
+
+              <!-- <li class="menu-header">Contenedores</li> -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-truck"></i> <span>Recolectores</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="crear_ruta.html">Crear Ruta</a></li>
+                </ul>
+              </li>
+
+              <!-- <li class="menu-header">Contenedores</li> -->
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-dumpster"></i> <span>Contenedores</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="contenedores.html">Contenedores</a></li>
+                </ul>
+              </li>
+            </ul>
+        </aside>
+      </div>
+      <!--BARRA LATERAL FIN -->
+      
+      <!--CONTENIDO INICIO -->
+      <div class="main-content">
+        <section class="section">
+          <div class="section-header">
+            <h1>Usuarios</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">General</a></div>
+              <div class="breadcrumb-item"><a href="#">Usuarios</a></div>
+              <div class="breadcrumb-item">Administración</div>
+            </div>
+          </div>
+
+          <div class="section-body">
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Usuarios</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-striped" id="table-1">
+                        <thead>
+                          <tr>
+                            <th class="text-center">
+                              #
+                            </th>
+                            <th>Nombre</th>
+                            <th>Usuario</th>
+                            <th>Tipo</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Nicolas</td>
+                            <td>nico</td>
+                            <td>ADMINISTRADOR</td>
+                            <td><div class="badge badge-success">Activo</div></td>
+                            <td><a href="#" class="btn btn-secondary"><i class="fa fa-cog"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Marina</td>
+                            <td>mar</td>
+                            <td>ADMINISTRADOR</td>
+                            <td><div class="badge badge-success">Activo</div></td>
+                            <td><a href="#" class="btn btn-secondary"><i class="fa fa-cog"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Test</td>
+                            <td>test</td>
+                            <td>USUARIO</td>
+                            <td><div class="badge badge-danger">BLOQUEADO</div></td>
+                            <td><a href="#" class="btn btn-secondary"><i class="fa fa-cog"></i></a></td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Gonzalo</td>
+                            <td>gonza</td>
+                            <td>ADMINISTRADOR</td>
+                            <td><div class="badge badge-success">Activo</div></td>
+                            <td><a href="#" class="btn btn-secondary"><i class="fa fa-cog"></i></a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--CONTENIDO FIN -->
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; 2021 <div class="bullet"></div> Design <a href="#">TALLENO</a>
+        </div>
+        <div class="footer-right">
+          1.0.0
+        </div>
+      </footer>
+    </div>
+  </div>
+
+    <!-- General JS Scripts -->
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/popper.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.nicescroll.min.js"></script>
+  <script src="../assets/js/moment.min.js"></script>
+  <script src="../assets/js/stisla.js"></script>
+
+  <!-- JS Libraies -->
+  <script src="../assets/js/jquery.sparkline.min.js"></script>
+  <script src="../assets/js/Chart.min.js"></script>
+  <script src="../assets/js/owl.carousel.min.js"></script>
+  <script src="../assets/js/summernote-bs4.js"></script>
+  <script src="../assets/js/jquery.chocolat.min.js"></script>
+  <script src="../assets/js/jquery.selectric.min.js"></script>
+
+   <!-- JS Libraies -->
+  <script src="../assets/js/datatables.min.js"></script>
+  <script src="../assets/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../assets/js/dataTables.select.min.js"></script>
+
+  <!-- Template JS File -->
+  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/leaflet.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script>
+    $("#table-1").dataTable({
+      "pageLength": 5,
+      "columnDefs": [
+        { "sortable": false, "targets": [2,3] }
+      ]
+    });
+  </script>
+</body>
+</html>
